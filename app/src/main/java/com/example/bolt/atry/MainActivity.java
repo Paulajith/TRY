@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnClickMe = (Button) findViewById(R.id.button);
+        /*Button btnClickMe = (Button) findViewById(R.id.button);
 
         TourGuide mTourGuideHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
                 .setPointer(new Pointer())
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 .setOverlay(new Overlay())
                 .playOn(btnClickMe);
 
-
+*/
 
 
     }
