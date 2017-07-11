@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Gray"
     tools:context="com.example.bolt.atry.MainActivity">
 
 
     <ImageButton
-        android:id="@+id/camera"
+        android:id="@+id/cam"
         android:layout_width="0dp"
         android:layout_height="180dp"
         android:layout_weight="1"
@@ -17,10 +16,11 @@
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="2.5dp"
-        android:background="@drawable/camera"/>
+        android:background="@drawable/camera"
+        android:onClick="cameraClick"/>
 
     <ImageButton
-        android:id="@+id/video"
+        android:id="@+id/vio"
         android:layout_width="0dp"
         android:layout_height="180dp"
         android:layout_weight="1"
@@ -28,7 +28,8 @@
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
-        android:background="@drawable/video"/>
+        android:background="@drawable/video"
+        android:onClick="videoClick"/>
 
 
 

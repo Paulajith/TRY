@@ -2,13 +2,18 @@ package com.example.bolt.atry;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.content.Intent;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import tourguide.tourguide.Overlay;
 import tourguide.tourguide.Pointer;
 import tourguide.tourguide.ToolTip;
 import tourguide.tourguide.TourGuide;
+
+import static com.example.bolt.atry.R.id.vio;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +32,49 @@ public class MainActivity extends AppCompatActivity {
 
 */
 
-
     }
+
+
+    public void cameraClick(final View v) {
+        if (v.getId() == R.id.cam) {
+            ImageButton btnClickMe = (ImageButton) findViewById(R.id.cam);
+
+            TourGuide mTourGuideHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
+                    //.setPointer(new Pointer())
+                    .setToolTip(new ToolTip().setTitle("Camera").setDescription("This will teach you to capture an image..."))
+                    .setOverlay(new Overlay())
+                    .playOn(btnClickMe);
+
+            Thread camThread = new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        sleep(3000);
+                        Intent i = new Intent(MainActivity.this,Camera.class);
+                        startActivity(i);
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            camThread.start();
+        }
+    }
+
+    public void videoClick(final View v) {
+        if (v.getId() == vio) {
+            ImageButton btnClickMe = (ImageButton) findViewById(vio);
+
+            TourGuide mTourGuideHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
+                    //.setPointer(new Pointer())
+                    .setToolTip(new ToolTip().setTitle("Camera").setDescription("This will teach you to capture an image..."))
+                    .setOverlay(new Overlay())
+                    .playOn(btnClickMe);
+
+
+        }
+    }
+
+
 }
