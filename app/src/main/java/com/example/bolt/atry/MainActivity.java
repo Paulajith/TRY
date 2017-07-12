@@ -37,41 +37,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void cameraClick(final View v) {
         if (v.getId() == R.id.cam) {
-            ImageButton btnClickMe = (ImageButton) findViewById(R.id.cam);
 
-            TourGuide mTourGuideHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
-                    //.setPointer(new Pointer())
-                    .setToolTip(new ToolTip().setTitle("Camera").setDescription("This will teach you to capture an image..."))
-                    .setOverlay(new Overlay())
-                    .playOn(btnClickMe);
-
-            Thread camThread = new Thread() {
-                @Override
-                public void run() {
-                    try {
-                        sleep(3000);
-                        Intent i = new Intent(MainActivity.this,Camera.class);
-                        startActivity(i);
-
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            };
-            camThread.start();
+            Intent i = new Intent(MainActivity.this, Camera.class);
+            startActivity(i);
         }
     }
+
 
     public void videoClick(final View v) {
         if (v.getId() == vio) {
             ImageButton btnClickMe = (ImageButton) findViewById(vio);
-
-            TourGuide mTourGuideHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
-                    //.setPointer(new Pointer())
-                    .setToolTip(new ToolTip().setTitle("Camera").setDescription("This will teach you to capture an image..."))
-                    .setOverlay(new Overlay())
-                    .playOn(btnClickMe);
-
 
         }
     }

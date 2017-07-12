@@ -40,16 +40,16 @@ public class Camera extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK) {
             Bitmap bp = (Bitmap) data.getExtras().get("data");
             capImage.setImageBitmap(bp);
         }
-    }
+    }*/
 
-    @Override
+    //@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
