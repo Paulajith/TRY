@@ -24,7 +24,7 @@ public class Camera extends AppCompatActivity {
 
         btnCamera = (Button) findViewById(R.id.captureBtn);
 
-        capImage= (ImageView) findViewById(R.id.capturePic);
+       // capImage= (ImageView) findViewById(R.id.capturePic);
 
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,15 +39,21 @@ public class Camera extends AppCompatActivity {
         startActivityForResult(intent, 0);
     }
 
-    @Override
-    /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+    public void galleryClick(final View v) {
+        Intent m = new Intent(Camera.this, Gallery.class);
+        startActivity(m);
+    }
+
+   /* @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK) {
             Bitmap bp = (Bitmap) data.getExtras().get("data");
             capImage.setImageBitmap(bp);
         }
-    }*/
+    } */
 
     //@Override
     public boolean onCreateOptionsMenu(Menu menu) {
