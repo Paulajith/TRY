@@ -11,18 +11,28 @@ import android.view.View;
 import android.view.MenuItem;
 import android.graphics.Typeface;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class Camera extends AppCompatActivity {
 
-    private Button btnCamera;
+    private ImageButton btnCamera;
     private ImageView capImage;
+
+
+
+    public void TutClick(final View v) {
+        Intent m = new Intent(Camera.this, cameraTut.class);
+        startActivity(m);
+    }
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        btnCamera = (Button) findViewById(R.id.captureBtn);
+        btnCamera = (ImageButton) findViewById(R.id.captureBtn);
 
        // capImage= (ImageView) findViewById(R.id.capturePic);
 
@@ -40,10 +50,7 @@ public class Camera extends AppCompatActivity {
     }
 
 
-    public void galleryClick(final View v) {
-        Intent m = new Intent(Camera.this, Gallery.class);
-        startActivity(m);
-    }
+
 
    /* @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

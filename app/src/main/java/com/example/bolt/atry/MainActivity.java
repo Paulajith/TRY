@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    
 
 
     public void videoClick(final View v) {
