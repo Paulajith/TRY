@@ -14,6 +14,7 @@
             android:id="@+id/RLay">
 
             <ImageButton
+                android:id="@+id/flashBtn"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@color/Black"
@@ -34,7 +35,7 @@
         <TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
-            android:text="Let's begin with the camera tutorial"
+            android:text="Let's become a photographer"
             android:textSize="35sp"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/RLay"
@@ -49,18 +50,27 @@
             android:id="@+id/tv2"
             android:textAlignment="center"
             android:layout_marginTop="20dp"
-            android:text="Click on each Button to know their use"/>
+            android:text="Click on each Button once you know their use"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Let's Start"
+            android:text="START"
             android:textSize="25dp"
             android:id="@+id/captureBtn2"
             android:background="@color/DodgerBlue"
             android:layout_marginTop="60dp"
-            android:onClick="TutCamera"
             android:layout_below="@id/tv2"
             android:layout_centerHorizontal="true"/>
+        <ImageButton
+            android:id="@+id/captureBtn3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/captureBtn2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ccp"
+            android:scaleType="centerInside"
+            android:background="@null"/>
         <ImageButton
          android:id="@+id/iBcapture"
          android:layout_width="100dp"
