@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
-    
 
 
     public void videoClick(final View v) {
@@ -50,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
             ImageButton btnClickMe = (ImageButton) findViewById(vio);
 
         }
+    }
+
+
+    public void nameClick(View v ){
+        Intent q = new Intent(MainActivity.this , nameGame.class);
+        startActivity(q);
     }
 
 
