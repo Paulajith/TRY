@@ -29,7 +29,9 @@
             android:screenOrientation="portrait" />
         <activity android:name=".cameraTut" />
         <activity android:name=".nameGame" />
-        <activity android:name=".game1"></activity>
+        <activity android:name=".game1" />
+        <activity android:name=".FuseGame" />
+        <activity android:name=".game2"></activity>
     </application>
 
 </manifest>

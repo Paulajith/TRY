@@ -58,4 +58,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void fuseClick(View v ){
+        Intent d = new Intent(MainActivity.this , FuseGame.class);
+        startActivity(d);
+    }
+
 }
